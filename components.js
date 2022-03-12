@@ -92,7 +92,7 @@ export const components = [
   },
   {
     id: 2,
-    name: "Find ClosestValue BST",
+    name: "Find Closest Value BST",
     component: <FindClosestValueBST />
   },
   {
