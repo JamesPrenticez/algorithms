@@ -87,7 +87,7 @@ import {
 export const components = [
   {
     id: 1,
-    name: "Two Number Sort",
+    name: "Two Number Sum",
     component: <TwoNumberSum />
   },
   {
