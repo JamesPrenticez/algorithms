@@ -7,7 +7,8 @@ import { components } from '../components'
 
 export default function Home() {
   const [filter, setFilter] = useState('')
-  console.log(filter)
+  const [complete, setComplete] = useState(false)
+
   return (
     <div className='flex justify-center'>
       <Head>
@@ -18,10 +19,17 @@ export default function Home() {
       <main className='max-w-7xl w-full'>
         <h1 className='flex items-center justify-center text-3xl font-helvetica h-20 bg-green-600'>Algorithms</h1>
 
+        <div
+          className={`flex w-full p-1 mt-1  rounded-sm cursor-pointer ${complete ? 'text-blue-600' : 'text-green-600'}`}
+          onClick={() => setComplete(!complete)}
+        >
+          <p className="ml-auto">{complete ? 'Show All' : 'Show Completed'}</p>
+        </div>
+
         {/* Search */}
-        <div className="relative mt-1 py-5 rounded-md">
+        <div className="relative mt-1 mb-5 rounded-md">
             <div className="absolute inset-y-0 pl-3 flex items-center pointer-events-none">
-                <svg  className="cursor-pointer h-10 w-10 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg  className="cursor-pointer h-10 w-10 text-gray-500 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>     
             </div>
@@ -34,8 +42,11 @@ export default function Home() {
             />
         </div>
 
+
+
         {[...components]
-          .filter(item => item.name.toLowerCase().includes(filter))// if not in filtered list
+          .filter(item => complete ? item.completed == true : 'do nothing')
+          .filter(item => item.name.toLowerCase().includes(filter))
           .map((item, index) => {
             console.log(item.name)
           return(

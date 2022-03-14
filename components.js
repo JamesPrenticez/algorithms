@@ -84,421 +84,503 @@ import {
   ZigZagTraverse,
 } from './components/index'
 
-export const components = [
-  {
-    id: 1,
-    name: "Two Number Sum",
-    component: <TwoNumberSum />
-  },
-  {
-    id: 2,
-    name: "Find Closest Value BST",
-    component: <FindClosestValueBST />
-  },
-  {
-    id: 3,
-    name: "Branch Sums",
-    component: <BranchSums />
-  },
-  {
-    id: 4,
-    name: "Depth First Search",
-    component: <DepthFirstSearch />
-  },
-  {
-    id: 5,
-    name: "Linked List Construction",
-    component: <LinkedListConstruction />
-  },
-  {
-    id: 6,
-    name: "NthFibonacci",
-    component: <NthFibonacci />
-  },
-  {
-    id: 7,
-    name: "Product Sum",
-    component: <ProductSum />
-  },
-  {
-    id: 8,
-    name: "Binary Search",
-    component: <BinarySearch />
-  },
-  {
-    id: 9,
-    name: "Find Three Largest Numbers",
-    component: <FindThreeLargestNumbers />
-  },
-  {
-    id: 10,
-    name: "Bubble Sort",
-    component: <BubbleSort />
-  },
-  {
-    id: 11,
-    name: "Insertion Sort",
-    component: <InsertionSort />
-  },
-  {
-    id: 12,
-    name: "Selection Sort",
-    component: <SelectionSort />
-  },
-  {
-    id: 13,
-    name: "PalidromeCheck",
-    component: <PalidromeCheck />
-  },
-  {
-    id: 14,
-    name: "Ceasar Cipher Encryptor",
-    component: <CeasarCipherEncryptor />
-  },
-  {
-    id: 15,
-    name: "Smallest Difference",
-    component: <SmallestDifference />
-  },
-  {
-    id: 16,
-    name: "Move Element To End",
-    component: <MoveElementToEnd />
-  },
-  {
-    id: 17,
-    name: "BST Construction",
-    component: <BSTConstruction />
-  },
-  {
-    id: 18,
-    name: "Validate BST",
-    component: <ValidateBST />
-  },
-  {
-    id: 19,
-    name: "BST Traversal",
-    component: <BSTTraversal />
-  },
-  {
-    id: 20,
-    name: "Invert Binary Tree",
-    component: <InvertBinaryTree />
-  },
-  {
-    id: 21,
-    name: "Max Subset Sum No Adjacent",
-    component: <MaxSubsetSumNoAdjacent />
-  },
-  {
-    id: 22,
-    name: "Number Of Way To Make Change",
-    component: <NumberOfWayToMakeChange />
-  },
-  {
-    id: 23,
-    name: "Min Number Of Coins For Change",
-    component: <MinNumberOfCoinsForChange />
-  },
-  {
-    id: 24,
-    name: "Levenshtein Distance",
-    component: <LevenshteinDistance />
-  },
-  {
-    id: 25,
-    name: "Kadanes Algorithm",
-    component: <Kadanes />
-  },
-  {
-    id: 26,
-    name: "Single Cycle Check",
-    component: <SingleCycleCheck />
-  },
-  {
-    id: 27,
-    name: "Breadth First",
-    component: <BreadthFirst />
-  },
-  {
-    id: 28,
-    name: "River Sizes",
-    component: <RiverSizes />
-  },
-  {
-    id: 29,
-    name: "Youngest Common Ancestor",
-    component: <YoungestCommonAncestor />
-  },
-  {
-    id: 30,
-    name: "Min Heap Construction",
-    component: <MinHeapConstruction />
-  },
-  {
-    id: 31,
-    name: "Remove Nth Node From End",
-    component: <RemoveNthNodeFromEnd />
-  },
-  {
-    id: 32,
-    name: "Permutations",
-    component: <Permutations />
-  },
-  {
-    id: 33,
-    name: "Powerset",
-    component: <Powerset />
-  },
-  {
-    id: 34,
-    name: "Search In Sorted Matrix",
-    component: <SearchInSortedMatrix />
-  },
-  {
-    id: 35,
-    name: "Min Max Stack Construction",
-    component: <MinMaxStackConstruction />
-  },
-  {
-    id: 36,
-    name: "Balanced Brackets",
-    component: <BalancedBrackets />
-  },
-  {
-    id: 37,
-    name: "Longest Palidronmic SubString",
-    component: <LongestPalidronmicSubString />
-  },
-  {
-    id: 38,
-    name: "Group Anagrams",
-    component: <GroupAnagrams />
-  },
-  {
-    id: 39,
-    name: "Suffix Trie Construction",
-    component: <SuffixTrieConstruction />
-  },
-  {
-    id: 40,
-    name: "Four Number Sum",
-    component: <FourNumberSum />
-  },
-  {
-    id: 41,
-    name: "Sub Array Sort",
-    component: <SubArraySort />
-  },
-  {
-    id: 42,
-    name: "Largest Range",
-    component: <LargestRange />
-  },
-  {
-    id: 43,
-    name: "Min Rewards",
-    component: <MinRewards />
-  },
-  {
-    id: 44,
-    name: "Zig Zag Traverse",
-    component: <ZigZagTraverse />
-  },
-  {
-    id: 45,
-    name: "Same BST",
-    component: <SameBST />
-  },
-  {
-    id: 46,
-    name: "Max Path Sum",
-    component: <MaxPathSum />
-  },
-  {
-    id: 47,
-    name: "Max Sum Increasing Subsequence",
-    component: <MaxSumIncreasingSubsequence />
-  },
-  {
-    id: 48,
-    name: "Longest Common Sub Sequence",
-    component: <LongestCommonSubSequence />
-  },
-  {
-    id: 49,
-    name: "Min Number Of Jumps",
-    component: <MinNumberOfJumps />
-  },
-  {
-    id: 50,
-    name: "Water Area",
-    component: <WaterArea />
-  },
-  {
-    id: 51,
-    name: "Knapsack Problem",
-    component: <KnapsackProblem />
-  },
-  {
-    id: 52,
-    name: "Disk Stacking",
-    component: <DiskStacking />
-  },
-  {
-    id: 53,
-    name: "Numbers In Pi",
-    component: <NumbersInPi />
-  },
-  {
-    id: 54,
-    name: "Topological Sort",
-    component: <TopologicalSort />
-  },
-  {
-    id: 55,
-    name: "Boggle Board",
-    component: <BoggleBoard />
-  },
-  {
-    id: 56,
-    name: "Continuous Median",
-    component: <ContinuousMedian />
-  },
-  {
-    id: 57,
-    name: "Find Loop",
-    component: <FindLoop />
-  },
-  {
-    id: 58,
-    name: "Reverse Linked List",
-    component: <ReverseLinkedList />
-  },
-  {
-    id: 59,
-    name: "Merge Linked List",
-    component: <MergeLinkedList />
-  },
-  {
-    id: 60,
-    name: "Interweaving Strings",
-    component: <InterweavingStrings />
-  },
-  {
-    id: 61,
-    name: "Shifted Binary Search",
-    component: <ShiftedBinarySearch />
-  },
-  {
-    id: 62,
-    name: "Search For Range",
-    component: <SearchForRange />
-  },
-  {
-    id: 63,
-    name: "Quick Select",
-    component: <QuickSelect />
-  },
-  {
-    id: 64,
-    name: "Quick Sort",
-    component: <QuickSort />
-  },
-  {
-    id: 65,
-    name: "Heap Sort",
-    component: <HeapSort />
-  },
-  {
-    id: 66,
-    name: "Longest Substring Without Duplication",
-    component: <LongestSubstringWithoutDuplication />
-  },
-  {
-    id: 67,
-    name: "Underscorigy SubString",
-    component: <UnderscorigySubString />
-  },
-  {
-    id: 68,
-    name: "Pattern Matcher",
-    component: <PatternMatcher />
-  },
-  {
-    id: 69,
-    name: "Multi String Search",
-    component: <MultiStringSearch />
-  },
-  {
-    id: 70,
-    name: "Apartment Hunting",
-    component: <ApartmentHunting />
-  },
-  {
-    id: 71,
-    name: "Calendar Matching",
-    component: <CalendarMatching />
-  },
-  {
-    id: 72,
-    name: "Iterative Inorder Traversal",
-    component: <IterativeInorderTraversal />
-  },
-  {
-    id: 73,
-    name: "Max Profit With K Transactions",
-    component: <MaxProfitWithKTransactions />
-  },
-  {
-    id: 74,
-    name: "Palindrome Partitioning Min Cuts",
-    component: <PalindromePartitioningMinCuts />
-  },
-  {
-    id: 75,
-    name: "Longest String Chain",
-    component: <LongestStringChain />
-  },
-  {
-    id: 76,
-    name: "Knuthe Morris Pratt",
-    component: <KnutheMorrisPratt />
-  },
-  {
-    id: 77,
-    name: "Rectangle Mania",
-    component: <RectangleMania />
-  },
-  {
-    id: 78,
-    name: "LRU Cache",
-    component: <LRUCache />
-  },
-  {
-    id: 79,
-    name: "Number Of Binary Tree Topologies",
-    component: <NumberOfBinaryTreeTopologies />
-  },
-  {
-    id: 80,
-    name: "Merge Sort",
-    component: <MergeSort />
-  },
-  {
-    id: 81,
-    name: "Smallest Substring Containing",
-    component: <SmallestSubstringContaining />
-  },
-  {
-    id: 82,
-    name: "Longest Increasing Subsequence",
-    component: <LongestIncreasingSubsequence />
-  },
-  {
-    id: 83,
-    name: "Airport Connections",
-    component: <AirportConnections />
-  },
+export const components = 
+[
+{
+  id: 1,
+  name: "AirportConnections",
+  component: <AirportConnections/>,
+},
+{
+  id: 2,
+  name: "ApartmentHunting",
+  component: <ApartmentHunting/>,
+  completed: false,
+},
+{
+  id: 3,
+  name: "BalancedBrackets",
+  component: <BalancedBrackets/>,
+  completed: false,
+},
+{
+  id: 4,
+  name: "BinarySearch",
+  component: <BinarySearch/>,
+  completed: false,
+},
+{
+  id: 5,
+  name: "BoggleBoard",
+  component: <BoggleBoard/>,
+  completed: false,
+},
+{
+  id: 6,
+  name: "BranchSums",
+  component: <BranchSums/>,
+  completed: false,
+},
+{
+  id: 7,
+  name: "BreadthFirst",
+  component: <BreadthFirst/>,
+  completed: false,
+},
+{
+  id: 8,
+  name: "BSTConstruction",
+  component: <BSTConstruction/>,
+  completed: false,
+},
+{
+  id: 9,
+  name: "BSTTraversal",
+  component: <BSTTraversal/>,
+  completed: false,
+},
+{
+  id: 10,
+  name: "BubbleSort",
+  component: <BubbleSort/>,
+  completed: false,
+},
+{
+  id: 11,
+  name: "CalendarMatching",
+  component: <CalendarMatching/>,
+  completed: false,
+},
+{
+  id: 12,
+  name: "CeasarCipherEncryptor",
+  component: <CeasarCipherEncryptor/>,
+  completed: false,
+},
+{
+  id: 13,
+  name: "ContinuousMedian",
+  component: <ContinuousMedian/>,
+  completed: false,
+},
+{
+  id: 14,
+  name: "DepthFirstSearch",
+  component: <DepthFirstSearch/>,
+  completed: false,
+},
+{
+  id: 15,
+  name: "DiskStacking",
+  component: <DiskStacking/>,
+  completed: false,
+},
+{
+  id: 16,
+  name: "FindClosestValueBST",
+  component: <FindClosestValueBST/>,
+  completed: false,
+},
+{
+  id: 17,
+  name: "FindLoop",
+  component: <FindLoop/>,
+  completed: false,
+},
+{
+  id: 18,
+  name: "FindThreeLargestNumbers",
+  component: <FindThreeLargestNumbers/>,
+  completed: false,
+},
+{
+  id: 19,
+  name: "FourNumberSum",
+  component: <FourNumberSum/>,
+  completed: false,
+},
+{
+  id: 20,
+  name: "GroupAnagrams",
+  component: <GroupAnagrams/>,
+  completed: false,
+},
+{
+  id: 21,
+  name: "HeapSort",
+  component: <HeapSort/>,
+  completed: false,
+},
+{
+  id: 22,
+  name: "InsertionSort",
+  component: <InsertionSort/>,
+  completed: false,
+},
+{
+  id: 23,
+  name: "InterweavingStrings",
+  component: <InterweavingStrings/>,
+  completed: false,
+},
+{
+  id: 24,
+  name: "InvertBinaryTree",
+  component: <InvertBinaryTree/>,
+  completed: false,
+},
+{
+  id: 25,
+  name: "IterativeInorderTraversal",
+  component: <IterativeInorderTraversal/>,
+  completed: false,
+},
+{
+  id: 26,
+  name: "Kadanes",
+  component: <Kadanes/>,
+  completed: false,
+},
+{
+  id: 27,
+  name: "KnapsackProblem",
+  component: <KnapsackProblem/>,
+  completed: false,
+},
+{
+  id: 28,
+  name: "KnutheMorrisPratt",
+  component: <KnutheMorrisPratt/>,
+  completed: false,
+},
+{
+  id: 29,
+  name: "LargestRange",
+  component: <LargestRange/>,
+  completed: false,
+},
+{
+  id: 30,
+  name: "LevenshteinDistance",
+  component: <LevenshteinDistance/>,
+  completed: false,
+},
+{
+  id: 31,
+  name: "LinkedListConstruction",
+  component: <LinkedListConstruction/>,
+  completed: false,
+},
+{
+  id: 32,
+  name: "LongestCommonSubSequence",
+  component: <LongestCommonSubSequence/>,
+  completed: false,
+},
+{
+  id: 33,
+  name: "LongestIncreasingSubsequence",
+  component: <LongestIncreasingSubsequence/>,
+  completed: false,
+},
+{
+  id: 34,
+  name: "LongestPalidronmicSubString",
+  component: <LongestPalidronmicSubString/>,
+  completed: false,
+},
+{
+  id: 35,
+  name: "LongestStringChain",
+  component: <LongestStringChain/>,
+  completed: false,
+},
+{
+  id: 36,
+  name: "LongestSubstringWithoutDuplication",
+  component: <LongestSubstringWithoutDuplication/>,
+  completed: false,
+},
+{
+  id: 37,
+  name: "LRUCache",
+  component: <LRUCache/>,
+  completed: false,
+},
+{
+  id: 38,
+  name: "MaxPathSum",
+  component: <MaxPathSum/>,
+  completed: false,
+},
+{
+  id: 39,
+  name: "MaxProfitWithKTransactions",
+  component: <MaxProfitWithKTransactions/>,
+  completed: false,
+},
+{
+  id: 40,
+  name: "MaxSubsetSumNoAdjacent",
+  component: <MaxSubsetSumNoAdjacent/>,
+  completed: false,
+},
+{
+  id: 41,
+  name: "MaxSumIncreasingSubsequence",
+  component: <MaxSumIncreasingSubsequence/>,
+  completed: false,
+},
+{
+  id: 42,
+  name: "MergeLinkedList",
+  component: <MergeLinkedList/>,
+  completed: false,
+},
+{
+  id: 43,
+  name: "MergeSort",
+  component: <MergeSort/>,
+  completed: false,
+},
+{
+  id: 44,
+  name: "MinHeapConstruction",
+  component: <MinHeapConstruction/>,
+  completed: false,
+},
+{
+  id: 45,
+  name: "MinMaxStackConstruction",
+  component: <MinMaxStackConstruction/>,
+  completed: false,
+},
+{
+  id: 46,
+  name: "MinNumberOfCoinsForChange",
+  component: <MinNumberOfCoinsForChange/>,
+  completed: false,
+},
+{
+  id: 47,
+  name: "MinNumberOfJumps",
+  component: <MinNumberOfJumps/>,
+  completed: false,
+},
+{
+  id: 48,
+  name: "MinRewards",
+  component: <MinRewards/>,
+  completed: false,
+},
+{
+  id: 49,
+  name: "MoveElementToEnd",
+  component: <MoveElementToEnd/>,
+  completed: false,
+},
+{
+  id: 50,
+  name: "MultiStringSearch",
+  component: <MultiStringSearch/>,
+  completed: false,
+},
+{
+  id: 51,
+  name: "NthFibonacci",
+  component: <NthFibonacci/>,
+  completed: false,
+},
+{
+  id: 52,
+  name: "NumberOfBinaryTreeTopologies",
+  component: <NumberOfBinaryTreeTopologies/>,
+  completed: false,
+},
+{
+  id: 53,
+  name: "NumberOfWayToMakeChange",
+  component: <NumberOfWayToMakeChange/>,
+  completed: false,
+},
+{
+  id: 54,
+  name: "NumbersInPi",
+  component: <NumbersInPi/>,
+  completed: false,
+},
+{
+  id: 55,
+  name: "PalidromeCheck",
+  component: <PalidromeCheck/>,
+  completed: false,
+},
+{
+  id: 56,
+  name: "PalindromePartitioningMinCuts",
+  component: <PalindromePartitioningMinCuts/>,
+  completed: false,
+},
+{
+  id: 57,
+  name: "PatternMatcher",
+  component: <PatternMatcher/>,
+  completed: false,
+},
+{
+  id: 58,
+  name: "Permutations",
+  component: <Permutations/>,
+  completed: false,
+},
+{
+  id: 59,
+  name: "Powerset",
+  component: <Powerset/>,
+  completed: false,
+},
+{
+  id: 60,
+  name: "ProductSum",
+  component: <ProductSum/>,
+  completed: false,
+},
+{
+  id: 61,
+  name: "QuickSelect",
+  component: <QuickSelect/>,
+  completed: false,
+},
+{
+  id: 62,
+  name: "QuickSort",
+  component: <QuickSort/>,
+  completed: false,
+},
+{
+  id: 63,
+  name: "RectangleMania",
+  component: <RectangleMania/>,
+  completed: false,
+},
+{
+  id: 64,
+  name: "RemoveNthNodeFromEnd",
+  component: <RemoveNthNodeFromEnd/>,
+  completed: false,
+},
+{
+  id: 65,
+  name: "ReverseLinkedList",
+  component: <ReverseLinkedList/>,
+  completed: false,
+},
+{
+  id: 66,
+  name: "RiverSizes",
+  component: <RiverSizes/>,
+  completed: false,
+},
+{
+  id: 67,
+  name: "SameBST",
+  component: <SameBST/>,
+  completed: false,
+},
+{
+  id: 68,
+  name: "SearchForRange",
+  component: <SearchForRange/>,
+  completed: false,
+},
+{
+  id: 69,
+  name: "SearchInSortedMatrix",
+  component: <SearchInSortedMatrix/>,
+  completed: false,
+},
+{
+  id: 70,
+  name: "SelectionSort",
+  component: <SelectionSort/>,
+  completed: false,
+},
+{
+  id: 71,
+  name: "ShiftedBinarySearch",
+  component: <ShiftedBinarySearch/>,
+  completed: false,
+},
+{
+  id: 72,
+  name: "SingleCycleCheck",
+  component: <SingleCycleCheck/>,
+  completed: false,
+},
+{
+  id: 73,
+  name: "SmallestDifference",
+  component: <SmallestDifference/>,
+  completed: false,
+},
+{
+  id: 74,
+  name: "SmallestSubstringContaining",
+  component: <SmallestSubstringContaining/>,
+  completed: false,
+},
+{
+  id: 75,
+  name: "SubArraySort",
+  component: <SubArraySort/>,
+  completed: false,
+},
+{
+  id: 76,
+  name: "SuffixTrieConstruction",
+  component: <SuffixTrieConstruction/>,
+  completed: false,
+},
+{
+  id: 77,
+  name: "TopologicalSort",
+  component: <TopologicalSort/>,
+  completed: false,
+},
+{
+  id: 78,
+  name: "TwoNumberSum",
+  component: <TwoNumberSum/>,
+  completed: true,
+},
+{
+  id: 79,
+  name: "UnderscorigySubString",
+  component: <UnderscorigySubString/>,
+  completed: false,
+},
+{
+  id: 80,
+  name: "ValidateBST",
+  component: <ValidateBST/>,
+  completed: false,
+},
+{
+  id: 81,
+  name: "WaterArea",
+  component: <WaterArea/>,
+  completed: false,
+},
+{
+  id: 82,
+  name: "YoungestCommonAncestor",
+  component: <YoungestCommonAncestor/>,
+  completed: false,
+},
+{
+  id: 83,
+  name: "ZigZagTraverse",
+  component: <ZigZagTraverse/>,
+  completed: false,
+}
 ]
-
