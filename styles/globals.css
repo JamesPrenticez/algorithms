@@ -8,6 +8,10 @@
     src: url(/fonts/helvetica-neue.ttf) format('truetype');
   }
 
+  html {
+    overflow-y:scroll;
+  }
+
   h2{
     font-weight: bold;
     font-size: 1.5rem;

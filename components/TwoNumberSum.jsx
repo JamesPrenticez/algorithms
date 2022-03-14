@@ -57,7 +57,7 @@ const TwoNumberSum = () => {
         </div>
 
         <CodeBlock
-          text={ 
+          text={` 
             function option1(array, target){
               for(let i = 0; i <= array.length; i++){
                 for(let j = 0; j < array.length; j++){
@@ -66,7 +66,7 @@ const TwoNumberSum = () => {
                 }
               }
             }
-          }
+          `}
           language="js"
           showLineNumbers={false}
           theme={obsidian}
@@ -107,7 +107,7 @@ const TwoNumberSum = () => {
         <p>Space complexity: O(n)</p>
 
         <CodeBlock
-          text={ 
+          text={` 
             function option3(array, target){
               let nums = {}
               for(let i = 0; i < array.length; i++){
@@ -121,7 +121,7 @@ const TwoNumberSum = () => {
               }
               return [] //no answer
             }
-          }
+          `}
           language="jsx"
           showLineNumbers={false}
           theme={obsidian}
