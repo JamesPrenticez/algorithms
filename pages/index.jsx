@@ -7,7 +7,7 @@ import { components } from '../components'
 
 export default function Home() {
   const [filter, setFilter] = useState('')
-  const [complete, setComplete] = useState(false)
+  const [complete, setComplete] = useState(true)
 
   return (
     <div className='flex justify-center'>
@@ -42,16 +42,13 @@ export default function Home() {
             />
         </div>
 
-
-
         {[...components]
           .filter(item => complete ? item.completed == true : 'do nothing')
-          .filter(item => item.name.toLowerCase().includes(filter))
+          .filter(item => item.name.toLowerCase().includes(filter) ||  item.id == filter)
           .map((item, index) => {
-            console.log(item.name)
           return(
-            <Collapsible key={index} title={`${item.id}. ${item.name}`}>
-              {item.component}
+            <Collapsible key={index} title={`${item.id}. ${item.name}`} difficulty={item?.difficulty}            >
+              {item.component} 
             </Collapsible>
           )
         })}

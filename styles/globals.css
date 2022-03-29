@@ -12,6 +12,12 @@
     overflow-y:scroll;
   }
 
+  h1{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px 0 10px 0;
+  }
+
   h2{
     font-weight: bold;
     font-size: 1.5rem;

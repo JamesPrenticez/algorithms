@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { ChevronLeftIcon, ChevronDownIcon } from "@heroicons/react/solid";
 
-const Collapsible = ({title, children}) => {
+const Collapsible = ({title, difficulty, children}) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -9,6 +9,7 @@ const Collapsible = ({title, children}) => {
 
         <div className="p-3 bg-gray-200 flex justify-between items-center w-full">
           <h1 className='font-helvetica text-3xl'>{title}</h1>
+          <h1 className='font-helvetica text-3xl'>{difficulty}</h1>
           <div>
             {isOpen ?
               <ChevronDownIcon onClick={() => setIsOpen(false)} className='h-12 w-12 cursor-pointer transform transition-all hover:scale-125 duration-150 ease-in-out select-none'/>

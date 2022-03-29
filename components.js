@@ -82,6 +82,7 @@ import {
   WaterArea,
   YoungestCommonAncestor,
   ZigZagTraverse,
+  LargerThanPrev
 } from './components/index'
 
 export const components = 
@@ -552,6 +553,7 @@ export const components =
   name: "TwoNumberSum",
   component: <TwoNumberSum/>,
   completed: true,
+  difficulty: 'easy',
 },
 {
   id: 79,
@@ -582,5 +584,13 @@ export const components =
   name: "ZigZagTraverse",
   component: <ZigZagTraverse/>,
   completed: false,
-}
+},
+{
+  id: 84,
+  name: "LargerThanPrev",
+  component: <LargerThanPrev/>,
+  completed: true,
+  difficulty: 'easy',
+},
+
 ]
