@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <Head>
 
         </Head>
-        <body className="bg-gray-50 h-full min-h-full font-sans">
+        <body className="bg-gray-50 h-full min-h-full">
           <Main />
           <NextScript />
         </body>

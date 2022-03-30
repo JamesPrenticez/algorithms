@@ -144,7 +144,8 @@ export const components =
   id: 10,
   name: "BubbleSort",
   component: <BubbleSort/>,
-  completed: false,
+  completed: true,
+  difficulty: "easy",
 },
 {
   id: 11,
@@ -457,6 +458,7 @@ export const components =
   name: "QuickSort",
   component: <QuickSort/>,
   completed: false,
+  difficulty: "hard",
 },
 {
   id: 63,

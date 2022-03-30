@@ -72,7 +72,7 @@ export default function LargerThanPrev(){
           </a>
       </Link>
 
-    <div className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-purple-500 font-bold " onClick={() => LargerThanPrev()}>{`${count == 0 ? "Run the Algorithim!" : "Result: " + count + " measurements - check the console"}`}</div>
+    <div className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold" onClick={() => LargerThanPrev()}>{`${count == 0 ? "Run the Algorithim!" : "Result: " + count + " measurements - check the console"}`}</div>
     </div>
   </>
   )
