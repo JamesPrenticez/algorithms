@@ -35,7 +35,7 @@ export default function BubbleSort(){
       <p>In other words is the current number smaller than or equal to the next number</p>
       <p>if they are carry on to the next number</p>
       <p>else we swap them </p>
-      <p>at the end of the iteration we ask ourselves "did we preform any swaps?"</p>
+      <p>at the end of the iteration we ask ourselves &quot;did we preform any swaps?&quot;</p>
       <p>if yes then our array is not sorted and we need to run it again</p>
       <p>if no then we are done</p>
       <br />
