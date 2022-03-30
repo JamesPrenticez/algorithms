@@ -65,6 +65,40 @@ export default function BubbleSort(){
   return (
     <div>
       <h1>BubbleSort</h1>
+      <div className='flex'>
+        <div className="inline-flex">
+          <div className='p-5 truncate block'>
+            {JSON.parse(array).map((num, index) => {
+              return (
+                <p key={index} className="">{num} &nbsp;</p>
+                )
+              })}
+          </div>
+
+          <div className='p-5 truncate block'>
+            {JSON.parse(auxArray).map((num, index) => {
+              return (
+                <p key={index} className="arrayItems">{num} &nbsp;</p>
+                )
+              })}
+          </div>
+        </div>
+        <div className='inline-flex ml-auto'>
+          <div 
+            className="bg-purple-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 h-16 ml-auto select-none"
+            onClick={() => resetArray()}
+            >
+            Randomize Array
+          </div>
+          <div 
+            className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 h-16 ml-auto select-none"
+            onClick={() => bubbleSort(array)}
+            >
+            BubbleSort
+          </div>
+        </div>
+      </div>
+
       <p>This is a pretty simple algorithim, its very intuitive and easy to wrap your head around. That being said it a a very important algorithim to prepare ourselves for more complex algorithims such as merge sort and quick sort.</p>
       <p>[8, 5, 2, 9, 6, 3]</p>
       <p>The goal is to sort a list of numbers in assending order in other words smallest to larget</p>
@@ -118,42 +152,7 @@ export default function BubbleSort(){
             theme={obsidian}
           />
 
-        <div className='flex'>
-
-        <div className="inline-flex">
-          <div className='p-5 truncate block'>
-            {JSON.parse(array).map((num, index) => {
-              return (
-                <p key={index} className="">{num} &nbsp;</p>
-                )
-              })}
-          </div>
-
-          <div className='p-5 truncate block'>
-            {JSON.parse(auxArray).map((num, index) => {
-              return (
-                <p key={index} className="arrayItems">{num} &nbsp;</p>
-                )
-              })}
-          </div>
-        </div>
-
-          <div className='inline-flex ml-auto'>
-            <div 
-              className="bg-purple-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 h-16 ml-auto select-none"
-              onClick={() => resetArray()}
-              >
-              Randomize Array
-            </div>
-            <div 
-              className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 h-16 ml-auto select-none"
-              onClick={() => bubbleSort(array)}
-              >
-              BubbleSort
-            </div>
         
-          </div>
-        </div>
     </div>
   )
 }
