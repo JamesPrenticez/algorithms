@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { CodeBlock, obsidian } from "react-code-blocks";
 
 export default function BubbleSort(){
-  const [array, setArray] = useState('[8, 5, 2, 9, 6, 3]')
-  const [auxArray, setAuxArray] = useState('[8, 5, 2, 9, 6, 3]')
+  const [array, setArray] = useState('[351, 0, 222, 611, 486, 189, 747, 748, 96, 44]')
+  const [auxArray, setAuxArray] = useState('[351, 0, 222, 611, 486, 189, 747, 748, 96, 44]')
   const ARRAY_LENGTH = 10
 
   const timer = ms => new Promise(res => setTimeout(res, ms))
@@ -64,7 +64,6 @@ export default function BubbleSort(){
 
   return (
     <div>
-      <h1>BubbleSort</h1>
       <div className='flex'>
         <div className="inline-flex">
           <div className='p-5 truncate block'>
@@ -100,7 +99,6 @@ export default function BubbleSort(){
       </div>
 
       <p>This is a pretty simple algorithim, its very intuitive and easy to wrap your head around. That being said it a a very important algorithim to prepare ourselves for more complex algorithims such as merge sort and quick sort.</p>
-      <p>[8, 5, 2, 9, 6, 3]</p>
       <p>The goal is to sort a list of numbers in assending order in other words smallest to larget</p>
       <p>Basically we are going to iterate thorugh this array serveral times</p>
       <p>And each time we iterate through it we are going to preform swaps to place numbers in their corret order</p>
