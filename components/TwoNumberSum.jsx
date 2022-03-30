@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { CodeBlock, obsidian } from "react-code-blocks";
 //8.47
 const TwoNumberSum = () => {
-  const [option1Answer, setOption1Answer] = useState([])
+  const [option1Answer, setOption1Answer] = useState("")
   const [array, setArray] = useState('[3, 5, -4, 8, 11, -1, 6]')
   const [target, setTarget] = useState(10)
 
@@ -11,10 +11,12 @@ const TwoNumberSum = () => {
     let myTarget = Number(target)
     for(let a = 0; a <= myArray.length; a++){
       for(let b = 0; b < myArray.length; b++){
-        if(myArray[a] != myArray[b] && myArray[a] + myArray[b] === myTarget) 
-        return "Sum: " + myArray[a] + "+" + myArray[b] + " = " + myTarget
+        if(myArray[a] != myArray[b] && myArray[a] + myArray[b] === myTarget){
+          return "Sum: " + myArray[a] + "+" + myArray[b] + " = " + myTarget
+        }
       }
-    }
+    } 
+    return "No two numbers = " + myTarget
   }
 
   function option3(array, target){
@@ -31,7 +33,7 @@ const TwoNumberSum = () => {
     return [] //no answer
   }
 
-  console.log(option3([3, 5, -4, 8, 11, -1, 6], 10))
+  //console.log(option3([3, 5, -4, 8, 11, -1, 6], 10))
 
 
   return (
@@ -50,7 +52,7 @@ const TwoNumberSum = () => {
         <p>Space: O(1)</p>
 
         <div className='p-3 text-3xl space-x-2'>
-          <input className="p-1 outline-none" placeholder={array} onChange={(e) => setArray("[" + e.target.value + "]")}/>
+          <input className="p-1 outline-none" placeholder="3, 5, -4, 8, 11, -1, 6" onChange={(e) => setArray("[" + e.target.value + "]")}/>
           <input className="p-1 outline-none" placeholder={target} onChange={(e) => setTarget(e.target.value)}/>
           <button className="p-1 bg-green-600 rounded" onClick={() => {setOption1Answer(option1(array, target))}}>Run</button>
           <p className='inline'>{option1Answer}</p>
