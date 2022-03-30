@@ -17,8 +17,8 @@ export default function BubbleSort(){
 
   function randomInt(min, max){
     const arrayItems = document.getElementsByClassName("arrayItems") //for animations
-    for(let i = 0; i < auxArray.length -1; i++){
-      arrayItems[i]?.style.color = "black"
+    for(let i = 0; i < arrayItems.length; i++){
+      arrayItems[i].style.color = "black"
     }
     return Math.floor(Math.random() * (max - min + 1) + min)
 
@@ -77,7 +77,7 @@ export default function BubbleSort(){
           <div className='p-5 truncate block'>
             {JSON.parse(auxArray).map((num, index) => {
               return (
-                <p key={index} className="arrayItems">{num} &nbsp;</p>
+                <p key={index} className="arrayItems" style={{color: ""}}>{num} &nbsp;</p>
                 )
               })}
           </div>
