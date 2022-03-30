@@ -2,20 +2,34 @@ import React, {useState, useEffect} from 'react'
 import { CodeBlock, obsidian } from "react-code-blocks";
 
 export default function BubbleSort(){
-  const [array, setArray] = useState([8, 5, 2, 9, 6, 3])
+  const [array, setArray] = useState('[8, 5, 2, 9, 6, 3]')
+  const ARRAY_LENGTH = 25
+
+  function randomInt(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  const resetArray = () => {
+    const myArray = []
+    for (let i = 0; i < ARRAY_LENGTH; i++){
+      myArray.push(randomInt(0, 800))
+    }
+    setArray(JSON.stringify(myArray))
+  }
 
   function bubbleSort(array){
+    let myArray = JSON.parse(array)
     let isSorted = false
     while(!isSorted){
       isSorted = true
-      for(let i = 0; i < array.length -1; i++){
-        if (array[i] > array[i + 1]){
-            swap(i, i + 1, array)
+      for(let i = 0; i < myArray.length -1; i++){
+        if (myArray[i] > myArray[i + 1]){
+            swap(i, i + 1, myArray)
             isSorted = false
         }
       }
     }
-    return setArray(array)
+    return setArray(JSON.stringify(myArray))
   }
 
   function swap(i, j, array){
@@ -77,19 +91,33 @@ export default function BubbleSort(){
             language="js"
             showLineNumbers={false}
             theme={obsidian}
-          />``
+          />
 
-        <div 
-          className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold"
-          onClick={() => bubbleSort([8, 5, 2, 9, 6, 3])}
-        >
-          BubbleSort
+        <div className='flex'>
+
+          <div className='p-5 text-center truncate'>
+            {array}
+          </div>
+
+          <div className='inline-flex ml-auto'>
+
+          <div 
+            className="bg-purple-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 ml-auto select-none"
+            onClick={() => resetArray()}
+            >
+            Randomize Array
+          </div>
+          <div 
+            className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 ml-auto select-none"
+            onClick={() => bubbleSort(array)}
+            >
+            BubbleSort
+          </div>
+            </div>
+
+
+
         </div>
-
-        <div className='p-5 text-center'>
-          {array}
-        </div>
-
 
 
 
