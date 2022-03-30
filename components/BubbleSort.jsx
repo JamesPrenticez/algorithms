@@ -3,10 +3,25 @@ import { CodeBlock, obsidian } from "react-code-blocks";
 
 export default function BubbleSort(){
   const [array, setArray] = useState('[8, 5, 2, 9, 6, 3]')
-  const ARRAY_LENGTH = 25
+  const [auxArray, setAuxArray] = useState('[8, 5, 2, 9, 6, 3]')
+  const ARRAY_LENGTH = 10
+
+  const timer = ms => new Promise(res => setTimeout(res, ms))
+
+  // async function load () { // We need to wrap the loop into an async function for this to work
+  //   for (var i = 0; i < 3; i++) {
+  //     console.log(i);
+  //     await timer(3000); // then the created Promise can be awaited
+  //   }
+  // }
 
   function randomInt(min, max){
+    const arrayItems = document.getElementsByClassName("arrayItems") //for animations
+    for(let i = 0; i < auxArray.length -1; i++){
+      arrayItems[i]?.style.color = "black"
+    }
     return Math.floor(Math.random() * (max - min + 1) + min)
+
   }
 
   const resetArray = () => {
@@ -15,9 +30,12 @@ export default function BubbleSort(){
       myArray.push(randomInt(0, 800))
     }
     setArray(JSON.stringify(myArray))
+    setAuxArray(JSON.stringify(myArray))
   }
 
-  function bubbleSort(array){
+  async function bubbleSort(array){
+    const arrayItems = document.getElementsByClassName("arrayItems") //for animations
+    console.log(arrayItems)
     let myArray = JSON.parse(array)
     let isSorted = false
     while(!isSorted){
@@ -25,7 +43,14 @@ export default function BubbleSort(){
       for(let i = 0; i < myArray.length -1; i++){
         if (myArray[i] > myArray[i + 1]){
             swap(i, i + 1, myArray)
+
+            arrayItems[i].style.color = "black"
+            arrayItems[i+1].style.color = "red"
+
+            setAuxArray(JSON.stringify(myArray))
+
             isSorted = false
+            await timer(250);
         }
       }
     }
@@ -95,32 +120,40 @@ export default function BubbleSort(){
 
         <div className='flex'>
 
-          <div className='p-5 text-center truncate'>
-            {array}
+        <div className="inline-flex">
+          <div className='p-5 truncate block'>
+            {JSON.parse(array).map((num, index) => {
+              return (
+                <p key={index} className="">{num} &nbsp;</p>
+                )
+              })}
           </div>
 
-          <div className='inline-flex ml-auto'>
-
-          <div 
-            className="bg-purple-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 ml-auto select-none"
-            onClick={() => resetArray()}
-            >
-            Randomize Array
+          <div className='p-5 truncate block'>
+            {JSON.parse(auxArray).map((num, index) => {
+              return (
+                <p key={index} className="arrayItems">{num} &nbsp;</p>
+                )
+              })}
           </div>
-          <div 
-            className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 ml-auto select-none"
-            onClick={() => bubbleSort(array)}
-            >
-            BubbleSort
-          </div>
-            </div>
-
-
-
         </div>
 
-
-
+          <div className='inline-flex ml-auto'>
+            <div 
+              className="bg-purple-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 h-16 ml-auto select-none"
+              onClick={() => resetArray()}
+              >
+              Randomize Array
+            </div>
+            <div 
+              className="bg-green-600 text-white p-5 rounded-md cursor-pointer hover:bg-white hover:text-green-500 font-bold w-48 h-16 ml-auto select-none"
+              onClick={() => bubbleSort(array)}
+              >
+              BubbleSort
+            </div>
+        
+          </div>
+        </div>
     </div>
   )
 }
